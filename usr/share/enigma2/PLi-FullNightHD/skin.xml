@@ -1829,6 +1829,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
     <panel name="PigTemplate" />
     <widget name="AboutScrollLabel" font="Regular;28" position="780,100" size="1110,912" zPosition="2" split="1" dividechar=":" colposition="0" />
   </screen>
+  <!-- Geolocation -->
+    <screen name="Geolocation" position="fill" flags="wfNoBorder">
+    <panel name="PigTemplate"/>
+    <widget name="AboutScrollLabel" font="Regular;28" position="780,100" size="1110,912" halign="center"/>
+  </screen> 
   <!-- Memory Info -->
   <screen name="MemoryInfo" position="fill" flags="wfNoBorder">
     <panel name="PigTemplate" />
