@@ -944,9 +944,12 @@
   </screen>
   <screen name="TimerEditList" position="fill" title="Timer Overview" flags="wfNoBorder">
     <panel name="PigTemplate" />
-    <panel name="KeyBooleanTemplate" />
+    <panel name="KeyInfoTemplate"/>
     <widget name="timerlist" position="780,100" size="1110,912" scrollbarMode="showOnDemand" itemHeight="76" rowSplit="42" setEventNameFont="Regular;32" setServiceNameFont="Regular;28" setFont="Regular;28" satPosLeft="250" />
-    <widget name="description" position="30,528" size="720,420" transparent="1" font="Regular;30" halign="block" />
+    <widget source="Service" render="Label" position="30,525" size="720,30" foregroundColor="transponderinfo" font="Regular;26" valign="center" halign="center" transparent="1" zPosition="1">
+	    <convert type="TransponderInfo"></convert>
+    </widget>
+    <widget name="description" position="30,570" size="720,385" transparent="1" font="Regular;30" halign="block"/>
   </screen>
   <screen name="TimerLog" position="fill" title="Timer log" flags="wfNoBorder">
     <panel name="PigTemplate" />
@@ -1011,14 +1014,14 @@
     <panel name="PigTemplate" />
     <widget name="checkList" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" backgroundColor="background" zPosition="3" transparent="1" scrollbarMode="showOnDemand" />
   </screen>
-  <!-- Ipkg installer -->
-  <screen name="IpkgInstaller" position="fill" flags="wfNoBorder">
+  <!-- Opkg installer -->
+  <screen name="OpkgInstaller" position="fill" flags="wfNoBorder">
     <panel name="PigTemplate" />
     <eLabel text="Install extensions" position="30,7" size="1830,75" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="left" />
     <widget name="list" position="780,100" size="1110,798" itemHeight="38" font="Regular;28" backgroundColor="background" zPosition="3" transparent="1" scrollbarMode="showOnDemand" />
     <widget source="introduction" render="Label" position="780,975" size="1110,37" backgroundColor="background" zPosition="1" transparent="1" foregroundColor="white" font="Regular;33" halign="center" />
   </screen>
-  <screen name="Ipkg" title="Installing Software" position="fill" flags="wfNoBorder">
+  <screen name="Opkg" title="Installing Software" position="fill" flags="wfNoBorder">
     <panel name="PigTemplate" />
     <widget name="package" position="780,110" size="1110,35" backgroundColor="darkgrey" transparent="1" font="Regular;32" />
     <widget name="status" position="780,163" size="1110,70" backgroundColor="darkgrey" transparent="1" font="Regular;32" />
@@ -1026,17 +1029,17 @@
     <widget name="activityslider" position="30,1024" size="1860,6" pixmap="window/slider100.png" transparent="1" zPosition="2" />
   </screen>
   <!-- Choose upgrade source -->
-  <screen name="IPKGMenu" title="Select IPKG source" position="fill" flags="wfNoBorder">
+  <screen name="OPKGMenu" title="Select OPKG source" position="fill" flags="wfNoBorder">
     <panel name="PigTemplate" />
     <widget name="filelist" position="780,105" size="1110,450" itemHeight="38" font="Regular;28" zPosition="3" transparent="1" scrollbarMode="showOnDemand" />
   </screen>
   <!-- Edit upgrade source -->
-  <screen name="IPKGSource" title="IPKG source" position="fill" flags="wfNoBorder">
+  <screen name="OPKGSource" title="OPKG source" position="fill" flags="wfNoBorder">
     <panel name="PigTemplate" />
     <widget name="text" position="30,570" size="1860,45" font="Regular;34" zPosition="3" transparent="1" />
   </screen>
   <!-- Packet Manager -->
-  <screen name="PacketManager" title="IPKG upgrade" position="fill" flags="wfNoBorder">
+  <screen name="PacketManager" title="OPKG upgrade" position="fill" flags="wfNoBorder">
     <panel name="PigTemplate" />
     <widget source="list" render="Listbox" position="780,105" size="1110,858" zPosition="3" transparent="1" scrollbarMode="showOnDemand">
       <convert type="TemplatedMultiContent">
@@ -1255,7 +1258,7 @@
       </widget>
     </panel>
   </screen>
-  <screen name="InstallWizardIpkgUpdater" position="fill" flags="wfNoBorder">
+  <screen name="InstallWizardOpkgUpdater" position="fill" flags="wfNoBorder">
     <panel name="WizardMarginsTemplate" />
     <panel position="top" size="*,100" />
     <panel name="RemoteControlTemplate" />
