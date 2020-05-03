@@ -56,11 +56,11 @@
   </screen>
   <screen name="PigTemplate">
     <panel name="SelectionTemplate" />
-    <ePixmap pixmap="PLi-FullNightHD/logos/logo.png" position="68,952" size="283,51" scale="1" zPosition="1" alphatest="blend" />
+    <ePixmap pixmap="PLi-FullNightHD-FIX/logos/logo.png" position="68,952" size="283,51" scale="1" zPosition="1" alphatest="blend" />
   </screen>
   <screen name="PigLessTemplate">
     <panel name="BasicTemplate" />
-    <ePixmap pixmap="PLi-FullNightHD/logos/logo.png" position="69,952" size="283,51" scale="1" zPosition="1" alphatest="blend" />
+    <ePixmap pixmap="PLi-FullNightHD-FIX/logos/logo.png" position="69,952" size="283,51" scale="1" zPosition="1" alphatest="blend" />
   </screen>
   <screen name="MenuTemplate">
     <panel name="PigTemplate" />
