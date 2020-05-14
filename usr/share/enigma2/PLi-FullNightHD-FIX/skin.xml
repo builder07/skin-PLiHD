@@ -944,12 +944,13 @@
   </screen>
   <screen name="TimerEditList" position="fill" title="Timer Overview" flags="wfNoBorder">
     <panel name="PigTemplate" />
-    <panel name="KeyInfoTemplate"/>
+    <panel name="KeyInfoTemplate" />
     <widget name="timerlist" position="780,100" size="1110,912" scrollbarMode="showOnDemand" itemHeight="76" rowSplit="42" setEventNameFont="Regular;32" setServiceNameFont="Regular;28" setFont="Regular;28" satPosLeft="250" />
     <widget source="Service" render="Label" position="30,525" size="720,30" foregroundColor="transponderinfo" font="Regular;26" valign="center" halign="center" transparent="1" zPosition="1">
-	    <convert type="TransponderInfo"></convert>
+      <convert type="TransponderInfo">
+      </convert>
     </widget>
-    <widget name="description" position="30,570" size="720,385" transparent="1" font="Regular;30" halign="block"/>
+    <widget name="description" position="30,570" size="720,385" transparent="1" font="Regular;30" halign="block" />
   </screen>
   <screen name="TimerLog" position="fill" title="Timer log" flags="wfNoBorder">
     <panel name="PigTemplate" />
@@ -1832,11 +1833,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
     <panel name="PigTemplate" />
     <widget name="AboutScrollLabel" font="Regular;28" position="780,100" size="1110,912" zPosition="2" split="1" dividechar=":" colposition="0" />
   </screen>
-  <!-- Geolocation -->
-    <screen name="Geolocation" position="fill" flags="wfNoBorder">
-    <panel name="PigTemplate"/>
-    <widget name="AboutScrollLabel" font="Regular;28" position="780,100" size="1110,912" halign="center"/>
-  </screen> 
   <!-- Memory Info -->
   <screen name="MemoryInfo" position="fill" flags="wfNoBorder">
     <panel name="PigTemplate" />
@@ -2077,8 +2073,19 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
     <panel name="PigTemplate" />
     <widget name="config" position="780,100" size="1110,855" itemHeight="45" font="Regular;33" transparent="1" scrollbarMode="showOnDemand" />
   </screen>
-
-
-
-
+  <!-- Geolocation -->
+  <screen name="Geolocation" position="fill" title="Geolocation" flags="wfNoBorder">
+    <panel name="PigTemplate" />
+    <widget name="AboutScrollLabel" font="Regular;28" position="780,100" size="1110,912" halign="center" />
+  </screen>
+  <!-- NetSpeedTest -->
+  <screen name="NetSpeedTestScreen" position="fill" title="Net Speed Test" flags="wfNoBorder">
+    <panel name="PigTemplate" />
+    <widget name="data" position="790,184" size="1100,701" font="Regular;28" transparent="1" scrollbarMode="showOnDemand" />
+    <widget name="ping" position="789,120" size="300,45" font="Regular;28" transparent="1" scrollbarMode="showOnDemand" />
+    <widget name="host" position="1593,897" size="300,100" font="Regular;28" transparent="1" scrollbarMode="showOnDemand" />
+    <widget name="ip" position="793,898" size="300,100" font="Regular;28" transparent="1" scrollbarMode="showOnDemand" />
+    <widget name="download" position="1194,120" size="300,45" font="Regular;28" transparent="1" scrollbarMode="showOnDemand" />
+    <widget name="upload" position="1590,120" size="300,45" font="Regular;28" transparent="1" scrollbarMode="showOnDemand" />
+  </screen>
 </skin>
