@@ -2088,4 +2088,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y() + (or
     <widget name="download" position="1194,120" size="300,45" font="Regular;28" transparent="1" scrollbarMode="showOnDemand" />
     <widget name="upload" position="1590,120" size="300,45" font="Regular;28" transparent="1" scrollbarMode="showOnDemand" />
   </screen>
+  <!-- Change Root Password-->
+  <screen name="ChangePasswdScreen" position="fill" title="Change Root Password" flags="wfNoBorder">
+    <panel name="PigTemplate" />
+    <widget name="passwd" position="782,123" size="1110,40" font="Regular;28" scrollbarMode="showOnDemand" itemHeight="40" />
+  </screen>
+  <screen name="SetPasswdMain" position="fill" title="Set Root Password" flags="wfNoBorder">
+    <panel name="PigTemplate" />
+  </screen>
+  <screen name="SetPasswdDo" position="fill" title="Set Root Password" flags="wfNoBorder">
+    <panel name="PigTemplate" />
+    <widget name="lab" position="780,120" size="1110,181" font="Regular;28" itemHeight="45" />
+  </screen>
 </skin>
